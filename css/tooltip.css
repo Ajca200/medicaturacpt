@@ -1,0 +1,130 @@
+.tooltip-contacto{
+	position: absolute;
+	top: -200px;
+	width: 21.25em;
+	height: auto;
+	box-shadow: 5px 5px 65px rgba(0,0,0,0.4);
+	border-radius: 15px;
+	background-color: #fff;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease all;
+	transform: translateY(10px);
+	text-align: center;
+}
+.tooltip-activo{
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0px);
+}
+.tooltip-contacto::after{
+	content: "";
+	display: inline-block;
+	border-left: solid 15px transparent;
+	border-right: solid 15px transparent;
+	border-top: solid 15px #fff;
+	position: absolute;
+	bottom: -10px;
+	left: calc(50% - 15px);
+	z-index: -10;
+}
+.tooltip-contacto img{
+	width: 100%;
+	height: 20vh;
+	vertical-align: top;
+	border-radius: 15px 15px 0 0;
+}
+.tooltip-contacto h6{
+	padding: 20px;
+	text-shadow: none;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.tooltip-ubicacion{
+	position: absolute;
+	top: 0px;
+	width: 21.25em;
+	height: auto;
+	box-shadow: 5px 5px 65px rgba(0,0,0,0.4);
+	border-radius: 15px;
+	background-color: #fff;
+	z-index: 100;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s ease all;
+	transform: translateY(10px);
+}
+.tooltip-activo{
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0px);
+}
+.tooltip-ubicacion::after{
+	content: "";
+	display: inline-block;
+	border-left: solid 15px transparent;
+	border-right: solid 15px transparent;
+	border-top: solid 15px #fff;
+	position: absolute;
+	bottom: -10px;
+	left: calc(50% - 15px);
+	z-index: -10;
+}
+.tooltip-ubicacion img{
+	width: 100%;
+	height: 50%;
+	vertical-align: top;
+	border-radius: 0 0 15px 15px;
+}
+.tooltip-ubicacion h6{
+	padding: 20px;
+	text-shadow: none;
+	font-family: arial;
+	font-weight: bold;
+}
+@media (max-width: 760px){
+	footer{
+		font-size: 12px;
+	}
+} 
+@media (max-width: 400px){
+	.redes{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+	footer{
+		padding: 30px;
+		height: auto;
+		align-items: center;
+		flex-direction: column;
+	}
+	.tooltip-ubicacion{
+		background-color: #fff;
+		position: static;
+		opacity: 1;
+		width: 90%;
+		transform: translateY(0);
+		margin-bottom: 20px;
+	}
+	.tooltip-ubicacion::after{
+		content: "";
+		display: none;
+	}
+	.tooltip-contacto{
+		background-color: #fff;
+		position: static;
+		opacity: 1;
+		width: 90%;
+		transform: translateY(0);
+	}
+	.tooltip-contacto::after{
+		content: "";
+		display: none;
+	}
+	.tooltip-contacto img{
+		height: 25vh;
+	}
+}

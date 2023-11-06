@@ -1,0 +1,32 @@
+.editor{
+	position: absolute;
+	top: 5%;
+	left: 10%;
+	width: 80%;
+	padding: 15px;
+	border-radius: 15px;
+	height: 70vh;
+	background-color: #fff;
+	box-shadow: 5px 5px 25px rgba(0,0,0,0.9);
+	opacity: 0;
+	transition: 0.5s ease-out;
+	animation-direction: reverse;
+	pointer-events: none;
+}
+.abrir-editor{
+	opacity: 1;
+	pointer-events: auto;
+}
+.encabezado-edit{
+	display: flex;
+	justify-content: space-between;
+}
+.img-edit{
+	transform: scale(1.5);
+	margin-right: 10px;
+}
+@media (max-width: 700px){
+	.editor{
+		width: 100%;
+	}
+}
